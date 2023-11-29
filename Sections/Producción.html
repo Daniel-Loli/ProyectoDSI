@@ -21,6 +21,16 @@ header {
     padding: 1em;
     margin-bottom: 10px;
 }
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
 
 .navbar-principal {
     background-color: #2C3E50; /* Color de fondo de la barra de navegación */
@@ -57,7 +67,7 @@ h1 {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 th, td {
@@ -192,11 +202,14 @@ input {
     </header>
 
     <!-- Requerimiento 3: Formulario para ingresar el código del pedido -->
+    <button onclick="generarReporte()" class="button-generar">Generar Reporte</button>
+    <button id="crearOrdenBtn">Crear Orden</button>
     <form action="#" method="post" >
         <label for="codigo_pedido">Código del Pedido:</label>
         <input type="text" id="codigo_pedido" name="codigo_pedido" required>
         <button type="button" onclick="buscarPedido()" class="button-generar">Buscar</button>
     </form>
+    
 
     <!-- Requerimiento 4: Mostrar en pantalla el producto con detalles relevantes en una tabla -->
     <div id="resultado_pedido">
@@ -275,8 +288,7 @@ input {
     </div>
 
     <!-- Requerimiento 5: Botón para generar el reporte final -->
-    <button onclick="generarReporte()" class="button-generar">Generar Reporte</button>
-    <button id="crearOrdenBtn">Crear Orden</button>
+
     <div class="overlay"></div>
     <!-- Requerimientos 2-6: Formulario para la orden de producción -->
 
