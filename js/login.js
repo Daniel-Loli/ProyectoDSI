@@ -62,3 +62,21 @@ anchoPage();
             caja_trasera_login.style.opacity = "1";
         }
 }
+
+function entrar1() {
+
+    event.preventDefault();
+    const usuario = document.getElementById('usuario').value;
+    const contraseña = document.getElementById('contraseña').value;
+
+    // Verifica si el usuario y la contraseña son los esperados
+    if (usuario === 'daniel' && contraseña === 'admin') {
+        // Si son correctos, redirige a la página deseada
+        window.location.href = './Sections/inicio.html';
+    } else {
+        // Si no son correctos, muestra un mensaje de error
+        alert("Usuario o contraseña incorrectos");
+    }
+}
+
+entrar.addEventListener('click', entrar1);

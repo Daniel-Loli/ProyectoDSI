@@ -1,377 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/produccion.css">
-    <title>Sistema de Gestión de Insumos</title>
-    <style>
-        
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(187, 245, 245); /* Color de fondo más claro */
-}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/produccion.css">
+        <title>Sistema de Gestión de Insumos</title>
 
-header {
-    background-color: #2C3E50; /* Azul oscuro */
-    color: #ecf0f1; /* Blanco */
-    text-align: center;
-    padding: 1em;
-    margin-bottom: 10px;
-}
-footer {
-  background-color: #343a40;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-
-}
-
-.navbar-principal {
-    background-color: #2C3E50; /* Color de fondo de la barra de navegación */
-}
-
-.navbar-principal ul {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.navbar-principal li {
-    margin: 0 15px; /* Mayor espacio entre elementos de la barra de navegación */
-}
-
-.navbar-principal a {
-    text-decoration: none;
-    color: #ecf0f1; /* Color del texto en la barra de navegación */
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
-}
-
-.navbar-principal a:hover {
-    color: #f39c12; /* Color de texto al pasar el ratón */
-}
-
-h1 {
-    color: #333;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-th, td {
-    border: 1px solid #080808;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-form {
-    margin: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.button-generar {
-    border: none;
-    outline: none;
-    height: 40px;
-    position: absolute;
-    border-radius: 8px;
-    right: 10px; /* Distancia desde el borde derecho */
-}
-
-.button-generar:hover {
-    background-color: #45a049;
-}
-
-.formulario-produccion {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.formulario-produccion label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.formulario-produccion input {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.button-generar-orden {
-    border: none;
-    outline: none;
-    height: 40px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.button-generar-orden:hover {
-    background-color: #45a049;
-}
-.formOrden{
-    padding: 10px;
-    border:1px solid black;
-    background-color: aquamarine;
-}
-.inactive{
-    display:none;
-}
-.overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000; /* Asegurarse que esté por encima de otros elementos */
-        }
-
-        .formulario-produccion {
-            
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1001; /* Por encima del overlay */
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Botón para cerrar el formulario */
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-    </style>
-
-</head>
-<body>
-    <header>
-        <div>
+    </head>
+    <body>
+        <header>
             <div>
-                <img src="../images/357ea71b6da1411ca3c9099042a1363d-removebg-preview.png"  width="120" class="logo" alt="logo">
-              </div>
-              <div>
-                <h2 >Consulta de productos</h2>
-                <nav class="navbar-principal">
-                    <ul>
-                        <li><a href="./inicio.html">Inicio</a></li>
-                        <li><a href="./Pedidos.html">Pedidos</a></li>
-                        <li><a href="./Inventario.html">Inventario</a></li>
-                    </ul>
-                </nav>
-              </div>
+                <div>
+                    <img src="../images/357ea71b6da1411ca3c9099042a1363d-removebg-preview.png"  width="120" class="logo" alt="logo">
+                </div>
+                <div>
+                    <h2 >Consulta de productos</h2>
+                    <nav class="navbar-principal">
+                        <ul>
+                            <li><a href="./inicio.html">Inicio</a></li>
+                            <li><a href="./Pedidos.html">Pedidos</a></li>
+                            <li><a href="./Inventario.html">Inventario</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="botones-contenedor">
+            <button id="crearOrdenBtn" class="button-principal button-crear-orden">Crear Orden</button>
+            <button onclick="generarReporte()" class="button-principal button-generar">Generar Reporte</button>
         </div>
 
-    </header>
-
-    <!-- Requerimiento 3: Formulario para ingresar el código del pedido -->
-    <button onclick="generarReporte()" class="button-generar">Generar Reporte</button>
-    <button id="crearOrdenBtn">Crear Orden</button>
-    <form action="#" method="post" >
-        <label for="codigo_pedido">Código del Pedido:</label>
-        <input type="text" id="codigo_pedido" name="codigo_pedido" required>
-        <button type="button" onclick="buscarPedido()" class="button-generar">Buscar</button>
-    </form>
-    
-
-    <!-- Requerimiento 4: Mostrar en pantalla el producto con detalles relevantes en una tabla -->
-    <div id="resultado_pedido">
-        <table id="tabla_pedido">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Inicio</th>
-                    <th>Fin</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 10 productos ficticios para demostración -->
-                <tr>
-                    <td>001</td>
-                    <td>Lámpara</td>
-                    <td>$50</td>
-                    <td>10</td>
-                    <td>01/01/2023</td>
-                    <td>31/01/2023</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Foco incandescente</td>
-                    <td>$50</td>
-                    <td>10</td>
-                    <td>01/01/2023</td>
-                    <td>31/01/2023</td>
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>Arreglo de luces LED</td>
-                    <td>$30</td>
-                    <td>5</td>
-                    <td>02/01/2023</td>
-                    <td>28/02/2023</td>
-                </tr>
-                <tr>
-                    <td>004</td>
-                    <td>Luces navideñas</td>
-                    <td>$25</td>
-                    <td>8</td>
-                    <td>15/02/2023</td>
-                    <td>30/03/2023</td>
-                </tr>
-                <tr>
-                    <td>005</td>
-                    <td>Faros de evento</td>
-                    <td>$40</td>
-                    <td>12</td>
-                    <td>10/03/2023</td>
-                    <td>15/04/2023</td>
-                </tr>
-                <tr>
-                    <td>006</td>
-                    <td>Focos forforecentes</td>
-                    <td>$35</td>
-                    <td>6</td>
-                    <td>05/04/2023</td>
-                    <td>20/05/2023</td>
-                </tr>
-                <tr>
-                    <td>007</td>
-                    <td>Luces para</td>
-                    <td>$45</td>
-                    <td>15</td>
-                    <td>25/05/2023</td>
-                    <td>10/06/2023</td>
-                </tr>   
-                <!-- Agrega más productos según sea necesario -->
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Requerimiento 5: Botón para generar el reporte final -->
-
-    <div class="overlay"></div>
-    <!-- Requerimientos 2-6: Formulario para la orden de producción -->
-
         
-        <form action="#" id="container-form" method="post" class="formOrden formulario-produccion inactive ">
-            <h2>Orden de Producción</h2>
-            <label for="numero_orden">Número de Orden:</label>
-            <input type="text" id="numero_orden" name="numero_orden" required>
-
-            <label for="numero_pedido">Número de Pedido:</label>
-            <input type="text" id="numero_pedido" name="numero_pedido" required>
-
-            <label for="cantidad">Cantidad:</label>
-            <input type="text" id="cantidad" name="cantidad" required>
-
-            <label for="inicio_produccion">Inicio de Producción:</label>
-            <input type="date" id="inicio_produccion" name="inicio_produccion" required>
-
-            <label for="fin_produccion">Fin de Producción:</label>
-            <input type="date" id="fin_produccion" name="fin_produccion" required>
-
-            <button type="button" onclick="generarCostoProduccion()">Generar Costo de Producción</button>
-
-            <!-- Mostrar automáticamente el costo de producción generado -->
-            <p>Costo de Producción: <span id="costo_produccion">0</span></p>
-
-            <button type="button" onclick="generarOrdenProduccion()" class="button-generar-orden">Generar Orden</button>
-            <span class="close-btn" onclick="closeForm()">X</span>
+        <form action="#" method="post" >
+            <label for="codigo_pedido">Código del Pedido:</label>
+            <input type="text" id="codigo_pedido" name="codigo_pedido" required>
+            <button type="button" onclick="buscarPedido()" class="button-generar">Buscar</button>
         </form>
+        
 
-        <footer>
-            <p>&copy; 2023 RafCald. Todos los derechos reservados.</p>
-          </footer>
-    <!-- Script para manejar la búsqueda del pedido, la generación del reporte y la orden de producción -->
-    <script src="../js/produccion.js">
-        function buscarPedido() {
-    // La función ahora se usa para demostrar cómo se podría actualizar la tabla con productos reales.
-    alert('Simulación de búsqueda de pedido');
-}
+        <!-- Requerimiento 4: Mostrar en pantalla el producto con detalles relevantes en una tabla -->
+        <div id="resultado_pedido">
+            <table id="tabla_pedido">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Inicio</th>
+                        <th>Fin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 10 productos ficticios para demostración -->
+                    <tr id="producto-001">
+                        <td>001</td>
+                        <td>Lámpara</td>
+                        <td>$50</td>
+                        <td>10</td>
+                        <td>01/01/2023</td>
+                        <td>31/01/2023</td>
+                    </tr>
+                    <tr id="producto-002">
+                        <td>002</td>
+                        <td>Foco incandescente</td>
+                        <td>$50</td>
+                        <td>10</td>
+                        <td>01/01/2023</td>
+                        <td>31/01/2023</td>
+                    </tr>
+                    <tr id="producto-003">
+                        <td>003</td>
+                        <td>Arreglo de luces LED</td>
+                        <td>$30</td>
+                        <td>5</td>
+                        <td>02/01/2023</td>
+                        <td>28/02/2023</td>
+                    </tr>
+                    <tr id="producto-004">
+                        <td>004</td>
+                        <td>Luces navideñas</td>
+                        <td>$25</td>
+                        <td>8</td>
+                        <td>15/02/2023</td>
+                        <td>30/03/2023</td>
+                    </tr>
+                    <tr id="producto-005">
+                        <td>005</td>
+                        <td>Faros de evento</td>
+                        <td>$40</td>
+                        <td>12</td>
+                        <td>10/03/2023</td>
+                        <td>15/04/2023</td>
+                    </tr>
+                    <tr id="producto-006">
+                        <td>006</td>
+                        <td>Focos forforecentes</td>
+                        <td>$35</td>
+                        <td>6</td>
+                        <td>05/04/2023</td>
+                        <td>20/05/2023</td>
+                    </tr>
+                    <tr id="producto-007">
+                        <td>007</td>
+                        <td>Luces para</td>
+                        <td>$45</td>
+                        <td>15</td>
+                        <td>25/05/2023</td>
+                        <td>10/06/2023</td>
+                    </tr>   
+                    <!-- Agrega más productos según sea necesario -->
+                </tbody>
+            </table>
+        </div>
 
-// Requerimiento 5: Función para generar el reporte final (demostración)
-function generarReporte() {
-    // Aquí puedes implementar la lógica para generar el reporte
-    // utilizando la información mostrada en la tabla.
-    alert('Reporte generado exitosamente');
-}
+        <!-- Requerimiento 5: Botón para generar el reporte final -->
 
-function generarCostoProduccion() {
-    // Puedes implementar la lógica para calcular el costo de producción aquí
-    // y mostrarlo en el span con id "costo_produccion".
-    // Aquí se usa una demostración simple.
-    const costoProduccion = 100; // Simulación de costo de producción
-    document.getElementById('costo_produccion').innerText = costoProduccion;
-}
+        <div class="overlay"></div>
+        <!-- Requerimientos 2-6: Formulario para la orden de producción -->
 
-function generarOrdenProduccion() {
-    // Aquí puedes implementar la lógica para generar la orden de producción.
-    alert('Orden de producción generada exitosamente');
-}
+            
+            <form action="#" id="container-form" method="post" class="formOrden formulario-produccion inactive ">
+                <h2>Orden de Producción</h2>
+                <label for="numero_orden">Número de Orden:</label>
+                <input type="text" id="numero_orden" name="numero_orden" required>
 
-document.getElementById('crearOrdenBtn').addEventListener('click', function() {
-    document.getElementById("container-form").classList.remove("inactive");
-    document.querySelector('.overlay').style.visibility = 'visible';
-});
-        // Mostrar el formulario
-        document.getElementById('crearOrdenBtn').addEventListener('click', function() {
-            document.getElementById("container-form").style.display = 'block';
-            document.querySelector('.overlay').style.display = 'block';
-        });
+                <label for="numero_pedido">Número de Pedido:</label>
+                <input type="text" id="numero_pedido" name="numero_pedido" required>
 
-        // Cerrar el formulario
-        function closeForm() {
-            document.getElementById("container-form").style.display = 'none';
-            document.querySelector('.overlay').style.display = 'none';
-        }
-                // Cerrar el formulario cuando se presione "Escape"
-                document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeForm();
-            }
-        });
-// Si quieres cerrar el formulario, puedes agregar un botón de cierre y manejarlo aquí
+                <label for="cantidad">Cantidad:</label>
+                <input type="text" id="cantidad" name="cantidad" required>
 
-    </script>
-</body>
-</html>
+                <label for="inicio_produccion">Inicio de Producción:</label>
+                <input type="date" id="inicio_produccion" name="inicio_produccion" required>
+
+                <label for="fin_produccion">Fin de Producción:</label>
+                <input type="date" id="fin_produccion" name="fin_produccion" required>
+
+                <button type="button" onclick="generarCostoProduccion()">Generar Costo de Producción</button>
+
+                <!-- Mostrar automáticamente el costo de producción generado -->
+                <p>Costo de Producción: <span id="costo_produccion">0</span></p>
+
+                <button type="button" onclick="generarOrdenProduccion()" class="button-generar-orden">Generar Orden</button>
+                <span class="close-btn" onclick="closeForm()">X</span>
+            </form>
+
+            <footer>
+                <p>&copy; 2023 RafCald. Todos los derechos reservados.</p>
+            </footer>
+        <!-- Script para manejar la búsqueda del pedido, la generación del reporte y la orden de producción -->
+        <script src="../js/produccion.js">
+    // Si quieres cerrar el formulario, puedes agregar un botón de cierre y manejarlo aquí
+
+        </script>
+    </body>
+    </html>

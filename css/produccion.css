@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(187, 245, 245); /* Color de fondo más claro */
+    background-color: rgb(255, 255, 255); /* Color de fondo más claro */
 }
 
 header {
@@ -166,3 +166,286 @@ footer {
 .inactive{
     display: none;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255); /* Color de fondo más claro */
+}
+
+header {
+    background-color: #2C3E50; /* Azul oscuro */
+    color: #ecf0f1; /* Blanco */
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 10px;
+}
+footer {
+background-color: #343a40;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+position: fixed;
+bottom: 0;
+width: 100%;
+
+}
+
+.navbar-principal {
+    background-color: #2C3E50; /* Color de fondo de la barra de navegación */
+}
+
+.navbar-principal ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-principal li {
+    margin: 0 15px; /* Mayor espacio entre elementos de la barra de navegación */
+}
+
+.navbar-principal a {
+    text-decoration: none;
+    color: #ecf0f1; /* Color del texto en la barra de navegación */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+}
+
+.navbar-principal a:hover {
+    color: #f39c12; /* Color de texto al pasar el ratón */
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+th, td {
+    border: 1px solid #080808;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button-generar {
+    border: none;
+    outline: none;
+    height: 40px;
+    position: absolute;
+    border-radius: 8px;
+    right: 10px; /* Distancia desde el borde derecho */
+}
+
+.button-generar:hover {
+    background-color: #45a049;
+}
+
+.formulario-produccion {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario-produccion label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario-produccion input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button-generar-orden {
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.button-generar-orden:hover {
+    background-color: #45a049;
+}
+.formOrden{
+    padding: 10px;
+    border:1px solid black;
+    background-color: aquamarine;
+}
+.inactive{
+    display:none;
+}
+/* Estilo General del Formulario */
+.formOrden {
+background-color: #f7f7f7; /* Color de fondo claro */
+border-radius: 10px; /* Bordes redondeados */
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para dar efecto elevado */
+padding: 20px;
+width: 300px; /* Ajusta según necesidad */
+margin: 0 auto; /* Centrado */
+}
+
+/* Estilos para las Etiquetas (Labels) */
+.formOrden label {
+display: block;
+margin-bottom: 8px;
+color: #333; /* Color oscuro para mejor contraste */
+font-size: 14px; /* Tamaño de letra */
+font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los Campos de Entrada (Inputs) */
+.formOrden input {
+width: 100%; /* Aprovechar todo el ancho del formulario */
+padding: 8px;
+margin-bottom: 15px;
+border: 1px solid #ccc; /* Bordes sutiles */
+border-radius: 4px; /* Bordes ligeramente redondeados */
+box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilos para los Botones */
+.formOrden button {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+background-color: #4CAF50; /* Color de fondo verde */
+color: white; /* Texto blanco para contraste */
+margin-bottom: 10px;
+}
+
+.formOrden button:hover {
+background-color: #45a049; /* Un tono más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de cierre */
+.close-btn {
+background-color: #ff4d4d; /* Color rojo para el botón de cierre */
+color: white;
+border: none;
+border-radius: 50%;
+cursor: pointer;
+padding: 5px 8px;
+font-size: 14px;
+position: absolute;
+top: -10px;
+right: -10px;
+}
+
+.close-btn:hover {
+background-color: #ff3333; /* Un tono más oscuro al pasar el ratón */
+}
+.botones-contenedor {
+display: flex; /* Activa flexbox */
+justify-content: center; /* Centra los botones horizontalmente */
+align-items: center; /* Centra los botones verticalmente */
+gap: 10px; /* Espacio entre los botones */
+}
+
+/* Continúa con los estilos previos para .button-principal, .button-generar, .button-crear-orden */
+
+/* Estilo común para botones principales */
+.button-principal {
+display: block; /* Hace que el botón ocupe toda la anchura de su contenedor */
+width: auto; /* El ancho se ajusta al texto más un padding */
+margin: 10px auto; /* Centrado con margen superior e inferior */
+padding: 10px 20px; /* Padding horizontal y vertical */
+border: none; /* Sin bordes */
+border-radius: 5px; /* Bordes ligeramente redondeados */
+cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+font-size: 16px; /* Tamaño de fuente legible */
+font-weight: bold; /* Texto en negrita para resaltar */
+color: white; /* Color de texto */
+text-align: center; /* Asegura que el texto esté centrado */
+text-decoration: none; /* Quita la decoración del texto (en caso de usar <a>) */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para efectos al pasar el ratón */
+}
+
+/* Estilos individuales para diferenciar los botones */
+.button-generar {
+background-color: #3498db; /* Azul */
+}
+
+.button-crear-orden {
+background-color: #2ecc71; /* Verde */
+}
+
+/* Cambios al pasar el ratón */
+.button-principal:hover {
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.button-generar:hover {
+background-color: #2980b9; /* Azul más oscuro */
+}
+
+.button-crear-orden:hover {
+background-color: #27ae60; /* Verde más oscuro */
+}
+
+.overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000; /* Asegurarse que esté por encima de otros elementos */
+        }
+
+        .formulario-produccion {
+            
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001; /* Por encima del overlay */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botón para cerrar el formulario */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
