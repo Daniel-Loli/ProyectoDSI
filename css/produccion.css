@@ -1,0 +1,168 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(187, 245, 245); /* Color de fondo más claro */
+}
+
+header {
+    background-color: #2C3E50; /* Azul oscuro */
+    color: #ecf0f1; /* Blanco */
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 10px;
+}
+
+.navbar-principal {
+    background-color: #2C3E50; /* Color de fondo de la barra de navegación */
+}
+
+.navbar-principal ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-principal li {
+    margin: 0 15px; /* Mayor espacio entre elementos de la barra de navegación */
+}
+
+.navbar-principal a {
+    text-decoration: none;
+    color: #ecf0f1; /* Color del texto en la barra de navegación */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+}
+
+.navbar-principal a:hover {
+    color: #f39c12; /* Color de texto al pasar el ratón */
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 60px;
+
+}
+
+th, td {
+    border: 1px solid #080808;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button-generar {
+    border: none;
+    outline: none;
+    height: 40px;
+    position: absolute;
+    border-radius: 8px;
+    right: 10px; /* Distancia desde el borde derecho */
+}
+
+.button-generar:hover {
+    background-color: #45a049;
+}
+
+.formulario-produccion {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario-produccion label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario-produccion input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.button-generar-orden {
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.button-generar-orden:hover {
+    background-color: #45a049;
+}
+.formOrden{
+    padding: 10px;
+    border:1px solid black;
+    background-color: aquamarine;
+}
+.inactive{
+    display:none;
+}
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+
+    bottom: 0;
+    width: 100%;
+  }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.formulario-produccion {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.inactive{
+    display: none;
+}

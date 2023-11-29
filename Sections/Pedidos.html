@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pedido.css">
+    <title>Registro de Pedidos</title>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div>
+                <img src="../images/357ea71b6da1411ca3c9099042a1363d-removebg-preview.png"  width="120" class="logo" alt="logo">
+              </div>
+        </div>
+        <div>
+            <h2>Registro de Pedidos</h2>
+            <nav class="navbar-principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./Producción.html">Producción</a></li>
+                    <li><a href="./Inventario.html">Inventario</a></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <button  class="buton-primary" onclick="mostrarFormulario('registroForm')">Registrar Cliente</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>DNI</th>
+                    <th>Dirección de entrega</th>
+                    <th>Telefono</th>
+                    <th>Correo electrónico</th>
+                    <th>Cantidad</th>
+                    <th>Tiempo de entrega</th>
+                    <th>Detalles del producto</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th colspan="3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaBody">
+                <!-- Datos ficticios de clientes y pedidos -->
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>12345678</td>
+                    <td>Calle A, Ciudad B</td>
+                    <td>123456789</td>
+                    <td>juan@example.com</td>
+                    <td>2</td>
+                    <td>2 días</td>
+                    <td>Lampara</td>
+                    <td>50.00</td>
+                    <td>100.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maria</td>
+                    <td>López</td>
+                    <td>87654321</td>
+                    <td>Avenida X, Ciudad Y</td>
+                    <td>987654321</td>
+                    <td>maria@example.com</td>
+                    <td>3</td>
+                    <td>3 días</td>
+                    <td>Luces navideñas</td>
+                    <td>25.00</td>
+                    <td>75.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos</td>
+                    <td>Gómez</td>
+                    <td>45678901</td>
+                    <td>Av. Principal, Ciudad Z</td>
+                    <td>555555555</td>
+                    <td>carlos@example.com</td>
+                    <td>1</td>
+                    <td>1 día</td>
+                    <td>Ganchos</td>
+                    <td>20.00</td>
+                    <td>20.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Ana</td>
+                    <td>Ruiz</td>
+                    <td>78901234</td>
+                    <td>Plaza Central, Ciudad W</td>
+                    <td>111111111</td>
+                    <td>ana@example.com</td>
+                    <td>5</td>
+                    <td>4 días</td>
+                    <td>Faros de evento</td>
+                    <td>150.00</td>
+                    <td>750.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Luisa</td>
+                    <td>Martínez</td>
+                    <td>89012345</td>
+                    <td>Calzada de la Luna, Ciudad V</td>
+                    <td>999999999</td>
+                    <td>luisa@example.com</td>
+                    <td>2</td>
+                    <td>2 días</td>
+                    <td>Foco incandecente</td>
+                    <td>40.00</td>
+                    <td>80.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Pablo</td>
+                    <td>Fernández</td>
+                    <td>23456789</td>
+                    <td>Plaza de la Libertad, Ciudad U</td>
+                    <td>666666666</td>
+                    <td>pablo@example.com</td>
+                    <td>3</td>
+                    <td>3 días</td>
+                    <td>Teclado mecánico</td>
+                    <td>60.00</td>
+                    <td>180.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Isabel</td>
+                    <td>Rodríguez</td>
+                    <td>34567890</td>
+                    <td>Av. de los Sueños, Ciudad T</td>
+                    <td>777777777</td>
+                    <td>isabel@example.com</td>
+                    <td>1</td>
+                    <td>1 día</td>
+                    <td>Pack de luces LED</td>
+                    <td>30.00</td>
+                    <td>30.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Ricardo</td>
+                    <td>Molina</td>
+                    <td>45678901</td>
+                    <td>Calle de los Recuerdos, Ciudad S</td>
+                    <td>888888888</td>
+                    <td>ricardo@example.com</td>
+                    <td>4</td>
+                    <td>4 días</td>
+                    <td>Lampara de noche</td>
+                    <td>500.00</td>
+                    <td>2000.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Clara</td>
+                    <td>Ortega</td>
+                    <td>56789012</td>
+                    <td>Av. de las Estrellas, Ciudad R</td>
+                    <td>333333333</td>
+                    <td>clara@example.com</td>
+                    <td>2</td>
+                    <td>2 días</td>
+                    <td>Luces de carro</td>
+                    <td>80.00</td>
+                    <td>160.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Felipe</td>
+                    <td>García</td>
+                    <td>67890123</td>
+                    <td>Calzada del Crepúsculo, Ciudad Q</td>
+                    <td>444444444</td>
+                    <td>felipe@example.com</td>
+                    <td>3</td>
+                    <td>3 días</td>
+                    <td>Luces mecanicas</td>
+                    <td>120.00</td>
+                    <td>360.00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form id="registroForm" style="display:none;">
+            <h3>Registrar Cliente</h3>
+
+            <!-- Datos del Cliente -->
+            <label for="clienteNombre">Nombre:</label>
+            <input type="text" id="clienteNombre" name="clienteNombre" required>
+
+            <label for="clienteApellidos">Apellidos:</label>
+            <input type="text" id="clienteApellidos" name="clienteApellidos" required>
+
+            <label for="clienteDNI">DNI:</label>
+            <input type="text" id="clienteDNI" name="clienteDNI" required>
+
+            <label for="clienteDireccion">Dirección de entrega:</label>
+            <input type="text" id="clienteDireccion" name="clienteDireccion" required>
+
+            <label for="clienteTelefono">Teléfono:</label>
+            <input type="tel" id="clienteTelefono" name="clienteTelefono" required>
+
+            <label for="clienteCorreo">Correo electrónico:</label>
+            <input type="email" id="clienteCorreo" name="clienteCorreo" required>
+
+            <button type="button" onclick="mostrarFormulario('pedidoForm')">Registrar cliente</button>
+        </form>
+
+        <form id="pedidoForm" style="display:none;">
+            <h3>Registrar Pedido</h3>
+
+            <!-- Datos del Pedido -->
+            <label for="pedidoCantidad">Cantidad:</label>
+            <input type="number" id="pedidoCantidad" name="pedidoCantidad" required>
+
+            <label for="pedidoTiempoEntrega">Tiempo de entrega:</label>
+            <input type="text" id="pedidoTiempoEntrega" name="pedidoTiempoEntrega" required>
+
+            <label for="pedidoDetalles">Detalles del producto:</label>
+            <textarea id="pedidoDetalles" name="pedidoDetalles" required></textarea>
+
+            <label for="pedidoPrecio">Precio:</label>
+            <input type="text" id="pedidoPrecio" name="pedidoPrecio" required>
+
+            <label for="pedidoTotal">Total:</label>
+            <input type="text" id="pedidoTotal" name="pedidoTotal" required>
+
+            <button type="submit">Registrar pedido</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RafCald. Todos los derechos reservados.</p>
+      </footer>
+
+    <script src="../js/pedidos.js">
+    </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,150 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inventario.css">
+    <title>Sistema de Inventario</title>
+
+</head>
+<body>
+    <header>
+        <div>
+            <div>
+                <img src="../images/357ea71b6da1411ca3c9099042a1363d-removebg-preview.png"  width="120" class="logo" alt="logo">
+              </div>
+              <div>
+                <h2>Sistema de Inventario</h2>
+                <nav class="navbar-principal">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./Pedidos.html">Pedidos</a></li>
+                        <li><a href="./Inventario.html">Inventario</a></li>
+                    </ul>
+                </nav>
+              </div>
+        </div>
+
+    </header>
+    
+    <div class="div-form">
+        <form action="#" method="post">
+            <label for="nombre_material">Nombre del Material:</label>
+            <input type="text" id="nombre_material_buscar" name="nombre_material" required>
+            <button type="button" onclick="buscarMaterial()" class="button-buscar">Buscar</button>
+        </form>
+        <div class="botones">
+            <button onclick="mostrarFormulario('agregar')" class="button-agregar">Agregar</button>
+            <button onclick="mostrarFormulario('modificar')" class="button-modificar">Modificar</button>
+        </div>
+
+    
+        <!-- Formulario para Agregar/Modificar -->
+        <div id="fondoOpaco">
+            <div id="formulario-insumo" style="display: none;" class="formmate">
+                <form action="#" method="post">
+                    <label for="nombre_material">Nombre del Material:</label>
+                    <input type="text" id="nombre_material" name="nombre_material" required>
+                
+                    <label for="cantidad_material">Cantidad:</label>
+                    <input type="text" id="cantidad_material" name="cantidad_material" required>
+                
+                    <!-- Agrega etiquetas y campos para descripción, costo, ubicación, etc. -->
+                
+                    <button type="button" onclick="guardarInsumo()">Guardar</button>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Requerimiento 2: Mostrar la relación de materia prima en almacén -->
+    <div id="resultado_inventario">
+        <table id="tabla_inventario">
+            <thead>
+                <tr >
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Stock actual</th>
+                    <!-- Otros campos relevantes del inventario -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos del inventario -->
+                <tr data-codigo="001">
+                    <td>001</td>
+                    <td>Focos</td>
+                    <td>10</td>
+                    <!-- Otros datos del inventario -->
+                </tr>
+                <tr data-codigo="002">
+                    <td>002</td>
+                    <td>Led</td>
+                    <td>15</td>
+                </tr>
+                <tr data-codigo="003">
+                    <td>003</td>
+                    <td>Bombillas</td>
+                    <td>8</td>
+                </tr>
+                <tr data-codigo="004">
+                    <td>004</td>
+                    <td>Tubos</td>
+                    <td>5</td>
+                </tr>
+                <tr data-codigo="005">
+                    <td>005</td>
+                    <td>Sostenedores</td>
+                    <td>12</td>
+                </tr>
+                <tr data-codigo="006">
+                    <td>006</td>
+                    <td>Cables standar</td>
+                    <td>20</td>
+                </tr>
+                <tr data-codigo="007">
+                    <td>007</td>
+                    <td>Ganchos</td>
+                    <td>18</td>
+                </tr>
+                <tr data-codigo="008">
+                    <td>008</td>
+                    <td>Gestionador de cables</td>
+                    <td>7</td>
+                </tr>
+                <tr data-codigo="009">
+                    <td>009</td>
+                    <td>Baterias</td>
+                    <td>14</td>
+                </tr>
+                <tr data-codigo="010">
+                    <td>010</td>
+                    <td>Postes</td>
+                    <td>25</td>
+                </tr>
+                <!-- Agrega más datos según sea necesario -->
+            </tbody>
+        </table>
+        
+    </div>
+
+    <!-- Botones para Agregar y Modificar -->
+
+
+    <!-- Requerimiento 4: Mostrar los materiales encontrados -->
+    <div id="resultado_busqueda">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </div>
+    <footer>
+        <p>&copy; 2023 RafCald. Todos los derechos reservados.</p>
+      </footer>
+    <!-- Script para manejar la búsqueda de material en el inventario y funcionalidad Agregar/Modificar -->
+    <script src="../js/inventario.js">
+    </script>
+</body>
+</html>
